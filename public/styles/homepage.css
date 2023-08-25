@@ -12,6 +12,10 @@ body {
             & > :nth-child(n + 2) {
                 padding: 0.7rem 0.5rem;
             }
+            & >input[type=checkbox]:checked + label {
+                color:black;
+                text-decoration: line-through;
+            }
             & > label {
                 font-size: 25px;
                 font-weight: var(--font-weight-bold);
