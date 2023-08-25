@@ -1,0 +1,49 @@
+body {
+    & > main {
+        padding-top: 5px;
+        & > article {
+            width: 50%;
+            justify-content: center;
+            margin: 10px auto;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            background-color: #5C5470;
+            padding: 10px;
+            & > :nth-child(n + 2) {
+                padding: 0.7rem 0.5rem;
+            }
+            & > label {
+                font-size: 25px;
+                font-weight: var(--font-weight-bold);
+            }
+            & > div {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0.5rem;
+                font-size: 0.8rem;
+                & > * {
+                    margin-right: 0.5rem;
+                }
+
+                & > a {
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    background-color: #03001C;
+                    color: #fff;
+                }
+                & > form {
+                        & > button {
+                        padding: 0.5rem 1rem;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        background-color: #e92424;
+                        color: #fff;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

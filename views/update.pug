@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/styles/main.css")
+        link(rel="stylesheet", href="/styles/add.css")
+        link(rel="shortcut icon", href="https://i.pinimg.com/originals/1f/3f/4c/1f3f4ce973d946578567f190e2773709.png", type="image/x-icon")
+        title Update Post
+    body
+        header
+            nav
+                img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMep-Psi-9ioX9RMFyW0_y_niN9nRv3PTJ3HQxGx1BtuLlGmfukF_4dxlgEe2CofcY920&usqp=CAU", alt="")
+                h1 To-do list 
+                ul
+                    li
+                        a(href="/") Home
+                    li 
+                        a(href="/add") Add 
+                form(action="/actionpage") 
+                    input(type="text", name="search",placeholder="Serach..")
+                    button(type="submit") Search
+        main 
+            form(action=`/update/${post.id}`, method="POST")
+                h1 Update Task
+                label(for="task") Task
+                input(type="text", name="task", placeholder="Task" value=post.task)
+                label(for="date") Deadline 
+                input(type="date", name="date", placeholder="Date" value=post.date)
+                label(for="username") Username
+                input(type="text", name="username", placeholder="Username" value=post.username)
+                input(type="submit", value="Update")

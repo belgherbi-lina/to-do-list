@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/styles/main.css")
+        link(rel="stylesheet", href="/styles/homepage.css")
+        link(rel="shortcut icon", href="https://i.pinimg.com/originals/1f/3f/4c/1f3f4ce973d946578567f190e2773709.png", type="image/x-icon")
+        title To Do list
+    body 
+        header
+            nav
+                img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMep-Psi-9ioX9RMFyW0_y_niN9nRv3PTJ3HQxGx1BtuLlGmfukF_4dxlgEe2CofcY920&usqp=CAU", alt="")
+                h1 To-do list 
+                ul
+                    li
+                        a(href="/") Home
+                    li 
+                        a(href="/add") Add 
+                form(action="/actionpage") 
+                    input(type="text", name="search",placeholder="Serach..")
+                    button(type="submit") Search
+        main 
+            each item in data
+                article
+                    -id = item.id
+                    input#task(type="checkbox", name="todo")
+                    label(for="task")= (item.task || "No Task")
+                    div
+                        p= item.date || "No date"
+                        p= "added by " + ( item.username || "inknown") 
+                    div
+                        a(href="/update/" + id) Update
+                        form(action="/delete/" + id, method="POST")
+                            button(type="submit") Delete
+        

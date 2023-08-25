@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    /* Fonts */
+    --font-family: 'Inter', sans-serif;
+    --font-size: 16px;
+    --font-weight-reg: 400;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-reg);
+    background-color: #B9B4C7;;
+    min-height: 100vh;
+    & > header {
+        width: 100%;
+        & > nav {
+            display: flex;
+            align-content: center;
+            background-color: #352F44;
+            & > img {
+                width: 5%;
+                border-radius: 60px;
+                margin: 10px;
+            }
+            & > h1 {
+                margin-top: 25px;
+                color: white;
+                margin-right: 150px;
+            }
+            & > ul {
+                margin: 2rem  1.2rem;
+                list-style: none;
+                display: flex;
+                & > li {
+                    & > a  {
+                        padding: 0.6rem 2rem;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        background-color: #5C5470;
+                        color: #FFF;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+            & > form {
+                & > input[type=text]{
+                    padding: 7px;
+                    margin-top: 23px;
+                    font-size: 17px;
+                    border: 1px solid #5C5470 ;
+                    border-radius: 10px;
+                }
+                & > button {
+                    padding: 7px 9px;
+                    margin-top: 23px;
+                    margin-left: 3px;
+                    border-radius: 10px;
+                    margin-right: 16px;
+                    background: #5C5470;
+                    font-size: 17px;
+                    color: #FFF;
+                    border: 1px solid #5C5470 ;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    body {
+        & > header {
+            & > nav {
+                & > img {
+                    height: 10%;
+                    margin-top: 20px;
+                }
+                & > h1 {
+                    margin-right: 30px;   
+                    font-size: 20px; 
+                }
+                & > ul {
+                    margin: 2rem  0.8rem;
+                }
+                & > form {
+                    & > input[type=text]{
+                        width: 150px;
+                        margin-left: -10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 750px){ 
+    body {
+        & > header {
+            & > nav {
+                
+                & > h1 {
+                    margin-right: 15px; 
+                    font-size: 15px;   
+                }
+                & > ul {
+                    margin: 2rem  0.5rem;
+                    & > li {
+                        & > a  {
+                            padding: 0.6rem 1rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                & > form {
+                    & > input[type=text]{
+                        width: 100px;
+                        font-size: 15px;
+                        padding:   10px 5px;
+                    }
+                    & > button {
+                        padding: 10px 5px;
+                        margin-left: 1px;
+                        margin-right: 10px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
